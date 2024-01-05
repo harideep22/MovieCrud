@@ -1,0 +1,17 @@
+<div class="content-main  ">
+    <h1>{{mov.Title}}</h1>
+    <button class="btn btn-danger ms-2" (click)=addFav() >Add Favourite</button>
+    <div class="contents row ">
+        <div class="col-4">
+            <img [style]="{width:'400px'}" src="{{mov.Poster}}" alt="">
+        </div>
+        <div class="col-8">
+            <h4>Released On - {{mov.Year}}</h4>
+            <h4>Rated - {{mov.Rated}}</h4>
+            <h4>Genre</h4><span>{{mov.Genre}}</span>
+            <h4>Plot</h4><span>{{mov.Plot}}</span>
+            <h4>Cast</h4><span>{{mov.Actors}}</span>
+            
+        </div>
+    </div>
+</div>

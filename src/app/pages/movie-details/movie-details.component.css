@@ -1,0 +1,19 @@
+.content-main h1{
+    display: flex;
+    justify-content: center;
+    color:red;
+}
+
+.contents{
+    color: white;
+    margin-top: 2rem;
+}
+
+span{
+    color: rgb(150, 150, 150);
+    font-size: 18px;
+}
+
+h4{
+    padding-top: 5px;
+}

@@ -1,0 +1,19 @@
+.navbar-brand{
+    padding-left: 10px;
+    color: red;
+}
+
+.sear{
+    display:flex
+}
+
+.fo{
+    margin-left: 37rem;
+    padding-left: 2rem;
+    display: flex;
+    width: 40rem;
+}
+
+.navbar{
+    display: flex;
+}

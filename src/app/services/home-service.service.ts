@@ -21,21 +21,26 @@ export class HomeServiceService {
 
     urlO = 'https://www.omdbapi.com';
 
+    //  https://www.omdbapi.com/?apikey=a5ef1268&s=movie&type=movie&page=1
+
   bannerApiData(): Observable<any> {
     return this.http.get(`${this.baseurl}/trending/all/week?api_key=${this.apikey}`);
   }
 
+  getAllMovie():Observable<any>{
 
+    return this.http.get(`${this.urlO}?apikey=a5ef1268&s=movie&type=movie&page=1`)
+  }
 
 
 
   searchMovie(movie: any): Observable<any> {
     // console.log(movie);
     
-    
-    
     return this.http.get(`${this.urlO}/?t=${movie}&apikey=a5ef1268`);
   }
+
+  
 
   addMovies(mov:any){
     this.favMovies.push(mov);
@@ -43,6 +48,6 @@ export class HomeServiceService {
 
   getFav(){
     return this.favMovies;
-  }
+  } 
 
 }

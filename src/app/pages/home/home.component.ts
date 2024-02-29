@@ -19,15 +19,25 @@ export class HomeComponent {
 
 
   ngOnInit(): void {
-    this.bannerData();
+    // this.bannerData();
+    this.getAllMovies();
 
   }
 
+  getAllMovies(){
+    this.service.getAllMovie().subscribe((result)=>{
+      // console.log(result.Search);
+
+      this.bannerResult=result.Search;
+      console.log(this.bannerResult);
+    })
+  }
 
 // bannerdata
   bannerData() {
     this.service.bannerApiData().subscribe((result) => {
       console.log(result, 'bannerresult#');
+      
       this.bannerResult = result.results;
     });
   }

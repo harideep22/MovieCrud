@@ -14,7 +14,7 @@ export class AppComponent {
 
   search(data:string){
     const k=data.search;
-    console.log(k);
+    // console.log(k);
     
     this.service.searchMovie(k).subscribe((result)=>{
       

@@ -1,24 +1,13 @@
-
 <div class="container-fluid">
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item " data-bs-interval="10000" *ngFor="let b of bannerResult;let i=index"
-          [ngClass]="{active:i===bannerResult.length-1}">
-          <img src="https://image.tmdb.org/t/p/original/{{ b.backdrop_path }}" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block cont">
-            <h2>{{b.original_title}}</h2>
-            <p>{{b.overview}}</p>
-          </div>
-
+  <div class="row">
+    <div class="col-md-3 " *ngFor="let b of bannerResult">
+      <div class="card">
+        <img [src]="b.Poster" class="card-img-top" width="100px" height="300px">
+        <div class="card-body">
+          <h5 class="card-title">{{ b.Title }}</h5>
+          <p class="card-text">{{ b.Year }}</p>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
   </div>
+</div>
